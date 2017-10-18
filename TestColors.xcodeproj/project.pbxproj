@@ -15,6 +15,7 @@
 		5BD3DFAC1F9640540085E57D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD3DFAA1F9640540085E57D /* LaunchScreen.storyboard */; };
 		5BD3DFB71F9640540085E57D /* TestColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD3DFB61F9640540085E57D /* TestColorsTests.m */; };
 		5BD3DFC21F9640540085E57D /* TestColorsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD3DFC11F9640540085E57D /* TestColorsUITests.m */; };
+		5BD3DFD31F9670AD0085E57D /* AVCColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD3DFD21F9670AD0085E57D /* AVCColorButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		5BD3DFBD1F9640540085E57D /* TestColorsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestColorsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD3DFC11F9640540085E57D /* TestColorsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestColorsUITests.m; sourceTree = "<group>"; };
 		5BD3DFC31F9640540085E57D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BD3DFD11F9670AD0085E57D /* AVCColorButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCColorButton.h; sourceTree = "<group>"; };
+		5BD3DFD21F9670AD0085E57D /* AVCColorButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCColorButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				5BD3DFAA1F9640540085E57D /* LaunchScreen.storyboard */,
 				5BD3DFAD1F9640540085E57D /* Info.plist */,
 				5BD3DF9C1F9640540085E57D /* Supporting Files */,
+				5BD3DFD11F9670AD0085E57D /* AVCColorButton.h */,
+				5BD3DFD21F9670AD0085E57D /* AVCColorButton.m */,
 			);
 			path = TestColors;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BD3DFD31F9670AD0085E57D /* AVCColorButton.m in Sources */,
 				5BD3DFA41F9640540085E57D /* ViewController.m in Sources */,
 				5BD3DFA11F9640540085E57D /* AppDelegate.m in Sources */,
 				5BD3DF9E1F9640540085E57D /* main.m in Sources */,
