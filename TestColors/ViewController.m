@@ -8,27 +8,26 @@
 
 #import "ViewController.h"
 #import "AVCColorButton.h"
+#import "TableViewController.h"
+
 
 @interface ViewController ()
 
-@property (strong, nonatomic) IBOutlet UITextView *textView;
+@property (atomic, strong) NSMutableArray * colorLine;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+-(void)viewDidLoad{
+    
+    self.colorLine = [NSMutableArray array];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (IBAction)handleButtonTap:(AVCColorButton *)sender {
+/*
     NSRange selectedRange = self.textView.selectedRange;
 
     if (selectedRange.length == 0) {
@@ -37,19 +36,33 @@
                                       message:@"Select the text"
                                       preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
-       
+
         [alert addAction:action];
         [self presentViewController:alert animated:YES completion:nil];
         
         return;
     }
+*/    
+    [self.textView.textStorage addAttribute:NSForegroundColorAttributeName value:sender.currentTitleColor range:self.textView.selectedRange];
     
-    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithAttributedString:self.textView.attributedText];
-    [text addAttribute:NSForegroundColorAttributeName value:sender.color range:self.textView.selectedRange];
-    self.textView.attributedText = text;
-    NSLog(@"%@ %@", sender.color, NSStringFromRange(self.textView.selectedRange));
-  
+    
+}
+- (IBAction)clearButton:(id)sender {
+    
+    [self.textView.textStorage removeAttribute:NSForegroundColorAttributeName range:self.textView.selectedRange];
 }
 
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([segue.identifier isEqualToString: @"SeeList"]){
+        
+    
+    TableViewController *vc = segue.destinationViewController;
+    [vc.tableInput removeAllObjects];
+    vc.tableInput = self.colorLine;
+
+    }
+}
 
 @end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B5DB8FA1FA07D9000B9EDD4 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DB8F91FA07D9000B9EDD4 /* TableViewController.m */; };
+		5BC9E69F1F9F99E200A68D7A /* AVCColorLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC9E69B1F9F99E200A68D7A /* AVCColorLine.m */; };
+		5BC9E6A01F9F99E200A68D7A /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5BC9E69C1F9F99E200A68D7A /* Base.lproj */; };
 		5BD3DF9E1F9640540085E57D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD3DF9D1F9640540085E57D /* main.m */; };
 		5BD3DFA11F9640540085E57D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD3DFA01F9640540085E57D /* AppDelegate.m */; };
 		5BD3DFA41F9640540085E57D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD3DFA31F9640540085E57D /* ViewController.m */; };
@@ -36,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B5DB8F81FA07D9000B9EDD4 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		5B5DB8F91FA07D9000B9EDD4 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		5BC9E69B1F9F99E200A68D7A /* AVCColorLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCColorLine.m; sourceTree = "<group>"; };
+		5BC9E69C1F9F99E200A68D7A /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		5BC9E6A21F9F9A1800A68D7A /* AVCColorLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCColorLine.h; sourceTree = "<group>"; };
 		5BD3DF991F9640540085E57D /* TestColors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestColors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD3DF9D1F9640540085E57D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BD3DF9F1F9640540085E57D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -104,6 +112,11 @@
 		5BD3DF9B1F9640540085E57D /* TestColors */ = {
 			isa = PBXGroup;
 			children = (
+				5BC9E69C1F9F99E200A68D7A /* Base.lproj */,
+				5B5DB8F81FA07D9000B9EDD4 /* TableViewController.h */,
+				5B5DB8F91FA07D9000B9EDD4 /* TableViewController.m */,
+				5BC9E6A21F9F9A1800A68D7A /* AVCColorLine.h */,
+				5BC9E69B1F9F99E200A68D7A /* AVCColorLine.m */,
 				5BD3DF9F1F9640540085E57D /* AppDelegate.h */,
 				5BD3DFA01F9640540085E57D /* AppDelegate.m */,
 				5BD3DFA21F9640540085E57D /* ViewController.h */,
@@ -253,6 +266,7 @@
 			files = (
 				5BD3DFAC1F9640540085E57D /* LaunchScreen.storyboard in Resources */,
 				5BD3DFA91F9640540085E57D /* Assets.xcassets in Resources */,
+				5BC9E6A01F9F99E200A68D7A /* Base.lproj in Resources */,
 				5BD3DFA71F9640540085E57D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,9 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC9E69F1F9F99E200A68D7A /* AVCColorLine.m in Sources */,
 				5BD3DFD31F9670AD0085E57D /* AVCColorButton.m in Sources */,
 				5BD3DFA41F9640540085E57D /* ViewController.m in Sources */,
 				5BD3DFA11F9640540085E57D /* AppDelegate.m in Sources */,
+				5B5DB8FA1FA07D9000B9EDD4 /* TableViewController.m in Sources */,
 				5BD3DF9E1F9640540085E57D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +531,7 @@
 				5BD3DFC81F9640540085E57D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BD3DFC91F9640540085E57D /* Build configuration list for PBXNativeTarget "TestColorsTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +540,7 @@
 				5BD3DFCB1F9640540085E57D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BD3DFCC1F9640540085E57D /* Build configuration list for PBXNativeTarget "TestColorsUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +549,7 @@
 				5BD3DFCE1F9640540085E57D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
