@@ -9,24 +9,24 @@
 #import "ViewController.h"
 #import "AVCColorButton.h"
 #import "TableViewController.h"
+#import "AVCColorLine.h"
 
 
 @interface ViewController ()
 
-@property (atomic, strong) NSMutableArray * colorLine;
+//@property (atomic, strong) NSMutableArray *colorLine;
 
 @end
 
 @implementation ViewController
 
-
 -(void)viewDidLoad{
-    
-    self.colorLine = [NSMutableArray array];
+    [super viewDidLoad];
 }
 
 
 - (IBAction)handleButtonTap:(AVCColorButton *)sender {
+    
 /*
     NSRange selectedRange = self.textView.selectedRange;
 
@@ -53,16 +53,39 @@
 }
 
 
+
+
+- (void)removeAttributeOfSubstring:(NSRange)range {
+        [self.textView.textStorage removeAttribute:NSForegroundColorAttributeName range:range];
+    }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+        if ([segue.identifier isEqualToString:@"See"]) {
+                TableViewController *vc = (TableViewController *)segue.destinationViewController;
+                vc.arrayColoredText = [self getListOfAttributedStrings:self.textView.textStorage];
+                vc.delegate = self;
+            }
+}
+/*
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    if ([segue.identifier isEqualToString: @"SeeList"]){
-        
-    
-    TableViewController *vc = segue.destinationViewController;
-    [vc.tableInput removeAllObjects];
-    vc.tableInput = self.colorLine;
-
+    if ([[segue identifier] isEqualToString: @"SeeList"]) {
+        NSAttributedString *intro = _textView.attributedText;
+        TableViewController *vc =[segue destinationViewController];
+        vc.introString = intro;
     }
+
+}
+*/
+- (NSMutableArray *)getListOfAttributedStrings:(NSTextStorage *)textStorage {
+      NSMutableArray *arraySelectedString = [[NSMutableArray alloc] init];
+        [textStorage enumerateAttribute:NSForegroundColorAttributeName inRange:NSMakeRange(0, self.textView.text.length) options:NSAttributedStringEnumerationReverse usingBlock:^void(id value, NSRange range, BOOL *stop) {
+                if (value) {
+                        AVCColorLine *stringSelected = [[AVCColorLine alloc] initWithAttributedString:[textStorage attributedSubstringFromRange:range] range:range];
+                        [arraySelectedString addObject:stringSelected];
+                    }
+           }];
+        return arraySelectedString;
 }
 
 @end

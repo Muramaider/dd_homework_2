@@ -7,11 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
-
-
+#import "ViewController.h"
+/*
 @interface TableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) IBOutlet UITableView *Table;
+
+
+@property (strong, nonatomic) NSAttributedString *introString;
+-(NSMutableArray *)createArrayOfStrings: (NSAttributedString *)introstring;
+
 
 @property (nonatomic, strong) NSMutableArray *tableInput;
 
+*/
+@protocol ListTableViewControllerDelegate <NSObject>
+- (void)removeAttributeOfSubstring:(NSRange)range;
+@end
+
+@interface TableViewController : UITableViewController
+@property (weak, nonatomic) id delegate;
+@property (strong, nonatomic) NSMutableArray *arrayColoredText;
 @end
