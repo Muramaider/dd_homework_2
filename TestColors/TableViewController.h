@@ -8,17 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
-/*
-@interface TableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-
-@property (strong, nonatomic) NSAttributedString *introString;
--(NSMutableArray *)createArrayOfStrings: (NSAttributedString *)introstring;
-
-
-@property (nonatomic, strong) NSMutableArray *tableInput;
-
-*/
 @protocol ListTableViewControllerDelegate <NSObject>
 - (void)removeAttributeOfSubstring:(NSRange)range;
 @end
