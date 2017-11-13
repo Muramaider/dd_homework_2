@@ -12,7 +12,7 @@
 
 @interface ViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UITextView *textView;
+@property (assign, nonatomic) IBOutlet UITextView *textView;
 
 
 @end

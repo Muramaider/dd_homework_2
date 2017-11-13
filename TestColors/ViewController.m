@@ -58,6 +58,7 @@
                 if (value) {
                         AVCColorLine *stringSelected = [[AVCColorLine alloc] initWithAttributedString:[textStorage attributedSubstringFromRange:range] range:range];
                         [arraySelectedString addObject:stringSelected];
+                    [stringSelected release];
                     }
            }];
         return arraySelectedString;

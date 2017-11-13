@@ -14,6 +14,7 @@
 @end
 
 @interface TableViewController : UITableViewController
-@property (weak, nonatomic) id delegate;
-@property (strong, nonatomic) NSMutableArray *arrayColoredText;
+@property (assign, nonatomic) id delegate;
+//@property (strong, nonatomic) NSMutableArray *arrayColoredText;
+@property (retain, nonatomic) NSMutableArray *arrayColoredText;
 @end

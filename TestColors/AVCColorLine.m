@@ -14,11 +14,15 @@
 - (id)initWithAttributedString:(NSAttributedString *)strParam range:(NSRange)range {
         self = [super init];
         if (self) {
-                [self setString:strParam];
-                [self setRange:range];
+            _string = [strParam copy];
+            _range = range;
         }
         return self;
 }
 
+-(void)dealloc{
+    [_string release];
+    [super dealloc];
+}
 
 @end
